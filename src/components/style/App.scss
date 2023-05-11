@@ -1,0 +1,62 @@
+$primarycolor : #f00; 
+$primary_color : Red;
+$primary_color : green;
+
+h1 {
+  color: $primarycolor
+} ; 
+
+$secondarycolor : green;
+
+h2 {
+       $primarycolor : green!global ;
+       background-color : $primarycolor ;
+}
+
+h3 {
+  color: $primary_color; 
+}
+
+.tera {
+  padding: 10px; 
+  background-color: $primary_color;
+  h3{
+    color: $primary_color;
+  }
+} 
+
+.button{
+  padding: 10px;
+  background-color: #f00;
+  &:hover {
+    background-color: orange;
+  }
+  &-prime{
+    font-size : 30px
+  }
+} 
+
+.button-prime{
+  padding: 10px;
+  background-color: rgb(255, 0, 170);
+  &:hover {
+    background-color: rgb(0, 255, 132);
+  }
+  &-prime{
+    font-size : 30px
+  }
+} 
+
+%button{
+  background-color: red;
+  color: black;
+}
+.button-primary {
+  @extend  %button;
+  padding: 30pxg; 
+}
+  .button-secondary{
+    @extend %button ;
+    padding: 50px;
+  }
+
